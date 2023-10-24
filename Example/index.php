@@ -1,16 +1,15 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'lib/StapeSGTMErroInterface.php';
-require 'lib/AddressImpl.php';
-require 'lib/UserDataImpl.php';
-require 'lib/EventDataImpl.php';
-require 'lib/StapeSGTMErro.php';
-require 'lib/StapeSGTM.php';
+namespace Stape\Sgtm\Example;
+
+use Stape\Sgtm\StapeSGTM;
+use Stape\Sgtm\Transforms;
+
+require '../vendor/autoload.php';
 
 $start = new StapeSGTM('https://gtm.stape.io', '/data?dhjdf=123');
 
-$eventData = array(
+$eventData = [
     'client_id' => '123456',
     'currency' => 'USD',
     'ip_override' => '79.144.123.69',
@@ -19,13 +18,13 @@ $eventData = array(
     'page_hostname' => 'Stape',
     'page_location' => 'http://stape.io',
     'page_path' => '/',
-    'user_data' => array(
-        'sha256_email_address' => hash('sha256', 'jhonn@doe.com'),
+    'user_data' => [
+        'sha256_email_address' => Transforms::sha256hex('jhonn@doe.com'),
         'phone_number' => '123456769',
-        'address' => array(
+        'address' => [
             'first_name' => 'Jhon',
-        ),
-    ),
-);
+        ],
+    ],
+];
 
 var_dump($start->sendEventData('page_view', $eventData));

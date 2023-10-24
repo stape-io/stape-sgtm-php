@@ -10,14 +10,17 @@
         "php": ">=8.0",
         "guzzlehttp/guzzle": "^7.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
     "autoload": {
         "psr-4": {
-            "Stape\\Sgtm\\": "lib/"
+            "Stape\\Sgtm\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Stripe\\": [
+            "Stape\\": [
                 "tests/"
             ]
         }
