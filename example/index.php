@@ -5,9 +5,9 @@ namespace Stape\Sgtm\Example;
 use Stape\Sgtm\StapeSGTM;
 use Stape\Sgtm\Transforms;
 
-require '../vendor/autoload.php';
+require_once __DIR__  . '/../vendor/autoload.php';
 
-$start = new StapeSGTM('https://gtm.stape.io', '/data?dhjdf=123');
+$start = StapeSGTM::create('https://gtm.stape.io', '/data?dhjdf=123');
 
 $eventData = [
     'client_id' => '123456',
