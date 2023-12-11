@@ -70,6 +70,7 @@ class StapeSGTMClient
 
         $postData = [
             'event_name' => $eventName,
+            'v' => $this->config['protocol_version'],
         ];
 
         $postData = ['body' => \array_merge($postData, $eventData->getData())];
