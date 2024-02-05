@@ -1,5 +1,7 @@
 # Stape sGTM PHP SDK
 
+A PHP SDK to send tracking events to server-side GTM containers. Works in conjunction with Data Client.
+
 ## Getting Started
 
 ### Configuration
