@@ -11,7 +11,7 @@ Fill in the basic parameters:
 ```php
 use Stape\Sgtm\StapeSGTM;
 
-$sgtm = StapeSGTM::create('https://gtm.stape.io', '/data');
+$sgtm = StapeSGTM::create('https://gtm.example.com', '/data');
 ```
 
 | Variable         | Description             |
