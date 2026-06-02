@@ -2,9 +2,11 @@
 
 namespace Stape\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Stape\Sgtm\Transforms;
 
+#[CoversClass(Transforms::class)]
 class StapeSGTMTransformsTest extends TestCase
 {
     public function testBase64(): void
