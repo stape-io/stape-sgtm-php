@@ -2,14 +2,19 @@
 
 namespace Stape\Tests;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use Stape\Sgtm\EventData;
 use Stape\Sgtm\SGTMException;
 use Stape\Sgtm\StapeSGTM;
 use Stape\Sgtm\StapeSGTMClient;
-use Stape\Sgtm\Transforms;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 
+#[CoversClass(StapeSGTM::class)]
+#[CoversClass(StapeSGTMClient::class)]
+#[CoversClass(EventData::class)]
+#[CoversClass(SGTMException::class)]
 class StapeSGTMClientTest extends TestCase
 {
     public function testCreateClient(): void
